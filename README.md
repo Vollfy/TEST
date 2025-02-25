@@ -1,1 +1,207 @@
-# TEST
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio - Twoje Imię</title>
+  <!-- Meta tagi SEO -->
+  <meta name="description" content="Portfolio - Twoje Imię. Projekty, umiejętności, doświadczenie.">
+  <meta name="keywords" content="portfolio, projekty, umiejętności, doświadczenie">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" 
+        integrity="sha512-Fo3rlrZj/kTcBJKxC7R5A+93T8bV8hzV0NTxZ0aqs5cYlt/gf3M5Kg+O9M/NW91Zt7F0X6DoxmlfVl14oQ8y2w==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- AOS (Animate On Scroll) CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Przycisk przełączający Dark/Light Mode -->
+  <button class="dark-mode-toggle" id="darkModeToggle" aria-label="Przełącz tryb ciemny/jasny">Tryb ciemny</button>
+  
+  <!-- Nagłówek -->
+  <header role="banner">
+    <div class="logo">Twoje Logo</div>
+    <nav aria-label="Główna nawigacja">
+      <ul>
+        <li><a href="#o-mnie">O mnie</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#uslugi">Usługi</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#opinie">Opinie</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+    <a href="cv.pdf" class="btn-cv" download>CV</a>
+  </header>
+  
+  <!-- Główna zawartość -->
+  <main>
+    <!-- Sekcja "O mnie" -->
+    <section id="o-mnie">
+      <h2 class="section-title" data-aos="fade-up">O mnie</h2>
+      <div class="about" data-aos="fade-up">
+        <img src="images/profile.jpg" alt="Zdjęcie profilowe" loading="lazy">
+        <div class="info">
+          <p>Cześć, jestem [Twoje Imię]. Jestem web developerem i projektantem UX/UI z doświadczeniem w tworzeniu nowoczesnych stron internetowych.</p>
+          <div class="skills">
+            <div class="skill"><i class="fab fa-html5"></i> HTML5</div>
+            <div class="skill"><i class="fab fa-css3-alt"></i> CSS3</div>
+            <div class="skill"><i class="fab fa-js"></i> JavaScript</div>
+            <div class="skill"><i class="fab fa-react"></i> React</div>
+            <div class="skill"><i class="fas fa-pencil-ruler"></i> UX/UI Design</div>
+          </div>
+          <button id="moreAboutBtn">Więcej o mnie</button>
+          <div class="more-info" id="moreInfo">
+            <p>Tu możesz dodać dodatkowe informacje o sobie, swoich doświadczeniach, edukacji, certyfikatach itp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sekcja "Portfolio" -->
+    <section id="portfolio">
+      <h2 class="section-title" data-aos="fade-up">Portfolio</h2>
+      <div class="portfolio-filters" data-aos="fade-up">
+        <button class="filter-btn active" data-filter="all">Wszystkie</button>
+        <button class="filter-btn" data-filter="web">Web Development</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="other">Inne</button>
+      </div>
+      <div class="portfolio-gallery" data-aos="fade-up">
+        <!-- Projekt 1 -->
+        <div class="project" data-category="web">
+          <img src="images/project1.jpg" alt="Projekt 1" loading="lazy">
+          <div class="project-description">
+            <h3>Projekt 1</h3>
+            <p>Krótki opis projektu 1.</p>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <!-- Projekt 2 -->
+        <div class="project" data-category="design">
+          <img src="images/project2.jpg" alt="Projekt 2" loading="lazy">
+          <div class="project-description">
+            <h3>Projekt 2</h3>
+            <p>Krótki opis projektu 2.</p>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+        <!-- Projekt 3 -->
+        <div class="project" data-category="other">
+          <img src="images/project3.jpg" alt="Projekt 3" loading="lazy">
+          <div class="project-description">
+            <h3>Projekt 3</h3>
+            <p>Krótki opis projektu 3.</p>
+            <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sekcja "Usługi" -->
+    <section id="uslugi">
+      <h2 class="section-title" data-aos="fade-up">Usługi</h2>
+      <div class="services" data-aos="fade-up">
+        <div class="service">
+          <i class="fas fa-code"></i>
+          <h3>Tworzenie stron internetowych</h3>
+          <p>Nowoczesne i responsywne strony internetowe.</p>
+          <button class="btn-service">Dowiedz się więcej</button>
+        </div>
+        <div class="service">
+          <i class="fas fa-paint-brush"></i>
+          <h3>Projektowanie UX/UI</h3>
+          <p>Intuicyjne i estetyczne projekty interfejsów.</p>
+          <button class="btn-service">Dowiedz się więcej</button>
+        </div>
+        <div class="service">
+          <i class="fas fa-search"></i>
+          <h3>Optymalizacja SEO</h3>
+          <p>Zwiększ widoczność swojej strony w wyszukiwarkach.</p>
+          <button class="btn-service">Dowiedz się więcej</button>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Sekcja "Blog" -->
+    <section id="blog">
+      <h2 class="section-title" data-aos="fade-up">Blog</h2>
+      <div class="blog-posts" data-aos="fade-up">
+        <div class="blog-post">
+          <h3>Tytuł wpisu blogowego</h3>
+          <p><small>Data publikacji: 2025-02-25</small></p>
+          <p>Krótki opis wpisu blogowego...</p>
+          <a href="#">Czytaj więcej</a>
+        </div>
+        <!-- Dodaj kolejne wpisy -->
+      </div>
+    </section>
+    
+    <!-- Sekcja "Opinie" -->
+    <section id="opinie">
+      <h2 class="section-title" data-aos="fade-up">Opinie</h2>
+      <div class="testimonials" data-aos="fade-up">
+        <div class="testimonial active" data-aos="fade-up">
+          <p>"Świetna współpraca, profesjonalizm i terminowość. Polecam!"</p>
+          <span>- Jan Kowalski, Klient</span>
+        </div>
+        <div class="testimonial" data-aos="fade-up">
+          <p>"Bardzo kreatywne podejście do projektów. Zdecydowanie warto skorzystać z usług."</p>
+          <span>- Anna Nowak, Klientka</span>
+        </div>
+        <!-- Dodaj kolejne opinie, jeśli potrzebne -->
+        <button id="prevTestimonial" class="testimonial-slider-btn" aria-label="Poprzednia opinia">&lt;</button>
+        <button id="nextTestimonial" class="testimonial-slider-btn" aria-label="Następna opinia">&gt;</button>
+      </div>
+    </section>
+    
+    <!-- Sekcja "Kontakt" -->
+    <section id="kontakt">
+      <h2 class="section-title" data-aos="fade-up">Kontakt</h2>
+      <div class="contact" data-aos="fade-up">
+        <!-- Formularz kontaktowy -->
+        <div class="contact-form">
+          <form id="contactForm">
+            <input type="text" name="name" placeholder="Imię i nazwisko" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="subject" placeholder="Temat" required>
+            <textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
+            <button type="submit">Wyślij</button>
+          </form>
+          <div id="formMessage"></div>
+        </div>
+        <!-- Dane kontaktowe -->
+        <div class="contact-info">
+          <p>Email: <a href="mailto:example@example.com">example@example.com</a></p>
+          <p>Telefon: +48 123 456 789</p>
+          <p>Adres: Ulica, Miasto, Kraj</p>
+          <div class="social-links">
+            <a href="#" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+            <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="#" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Stopka -->
+  <footer>
+    <p>© 2025 Twoje Imię. Wszystkie prawa zastrzeżone.</p>
+    <p>
+      <a href="#">Polityka prywatności</a> |
+      <a href="#">Warunki korzystania</a>
+    </p>
+  </footer>
+  
+  <!-- Skrypty JavaScript -->
+  <!-- AOS (Animate On Scroll) JS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="js/script.js"></script>
+</body>
+</html>
